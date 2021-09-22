@@ -37,8 +37,16 @@ subprojects {
             ktlint().userData(['max_line_length': '100'])
         }
     }
-}
 
+    task copySpotlessPreCommitHook() {
+        def gitHooksDirectory = new File("$project.rootDir/.git/hooks/")
+        if (!gitHooksDirectory.exists()) gitHooksDirectory.mkdirs()
+        copy {
+            from "$project.rootDir/tools/pre-commit"
+            into "$project.rootDir/.git/hooks"
+        }
+    }
+}
 
 /*task clean(type: Delete) {
     delete rootProject.buildDir
