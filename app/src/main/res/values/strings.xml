@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SpikeGenerateCsv</string>
+
+    <string name="generate_csv">Generar Csv</string>
+</resources>
