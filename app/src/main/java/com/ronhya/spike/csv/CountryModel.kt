@@ -8,5 +8,6 @@ data class CountryModel(
     @field:JsonProperty("Country")
     val country: String,
     @field:JsonProperty("Capital")
-    val capital: String
+    val capital: String,
+    val currency: String
 )
