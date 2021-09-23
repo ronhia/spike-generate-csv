@@ -5,7 +5,10 @@
 *.iml
 .gradle
 /local.properties
+
 .idea/
+!.idea/codeStyles/codeStyleConfig.xml
+
 .DS_Store
 /captures
 .externalNativeBuild
