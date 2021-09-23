@@ -31,6 +31,7 @@ class TestCode {
         hobbies: String
     ) {
         println("firstName: $firstName")
+        println("lastName: $lastName")
     }
 
     fun add() {
