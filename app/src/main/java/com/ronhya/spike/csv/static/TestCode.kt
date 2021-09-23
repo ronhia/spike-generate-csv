@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit.SECONDS
 
 class TestCode {
 
-    fun test(){
+    fun test() {
         val myList: ArrayList<String> = arrayListOf("hola")
         var x = DAYS
         x = HOURS
@@ -22,11 +22,18 @@ class TestCode {
         x = MICROSECONDS
     }
 
-    fun update(firstName: String, lastName: String, country: String, age: Int, size: Long, hobbies: String) {
-        // TODO
+    fun update(
+        firstName: String,
+        lastName: String,
+        country: String,
+        age: Int,
+        size: Long,
+        hobbies: String
+    ) {
+        println("firstName: $firstName")
     }
 
     fun add() {
-        // TODO
+        println("run add")
     }
 }
