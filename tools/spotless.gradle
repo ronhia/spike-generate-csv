@@ -1,0 +1,19 @@
+apply plugin: 'com.diffplug.gradle.spotless'
+
+spotless {
+
+    kotlin {
+        target '**/*.kt'
+        ktlint().userData(['max_line_length': '100'])
+    }
+
+}
+
+task copySpotlessPreCommitHook() {
+    def gitHooksDirectory = new File("$rootDir/.git/hooks/")
+    if (!gitHooksDirectory.exists()) gitHooksDirectory.mkdirs()
+    copy {
+        from "$rootDir/tools/pre-commit"
+        into "$rootDir/.git/hooks"
+    }
+}

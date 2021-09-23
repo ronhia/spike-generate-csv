@@ -18,6 +18,8 @@ plugins {
     id "com.diffplug.gradle.spotless" version "3.27.1"
 }
 
+apply from: "$rootDir/tools/spotless.gradle"
+
 allprojects {
     repositories {
         google()
@@ -25,29 +27,3 @@ allprojects {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-
-subprojects {
-
-    apply plugin: 'com.diffplug.gradle.spotless'
-
-    spotless {
-
-        kotlin {
-            target '**/*.kt'
-            ktlint().userData(['max_line_length': '100'])
-        }
-    }
-
-    task copySpotlessPreCommitHook() {
-        def gitHooksDirectory = new File("$project.rootDir/.git/hooks/")
-        if (!gitHooksDirectory.exists()) gitHooksDirectory.mkdirs()
-        copy {
-            from "$project.rootDir/tools/pre-commit"
-            into "$project.rootDir/.git/hooks"
-        }
-    }
-}
-
-/*task clean(type: Delete) {
-    delete rootProject.buildDir
-}*/
