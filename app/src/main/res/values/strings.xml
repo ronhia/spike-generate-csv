@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SpikeGenerateCsv</string>
+    <string name="app_name">Spike Generate Csv</string>
 
     <string name="generate_csv">Generar Csv</string>
 </resources>
