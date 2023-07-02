@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun generateCountryDummy(): List<CountryModel> {
         return listOf(
-            CountryModel(country = "Perú", capital = "Lima"),
-            CountryModel(country = "Colombia", capital = "Bogotá"),
-            CountryModel(country = "Ecuador", capital = "Quito"),
-            CountryModel(country = "China", capital = "道")
+            CountryModel(country = "Perú", capital = "Lima", currency = "PEN"),
+            CountryModel(country = "Colombia", capital = "Bogotá", currency = "COP"),
+            CountryModel(country = "Ecuador", capital = "Quito", currency = "ECS"),
+            CountryModel(country = "China", capital = "道", currency = "CNY")
         )
     }
 
